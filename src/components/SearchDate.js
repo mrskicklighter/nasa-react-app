@@ -2,6 +2,7 @@ import React from 'react';
 import {Image, FormGroup, ControlLabel,FormControl, HelpBlock, Button} from "react-bootstrap";
 
 
+
 class SearchDate extends React.Component {
   constructor(props, context) {
     super(props, context);
@@ -46,15 +47,16 @@ class SearchDate extends React.Component {
             <Button bsStyle="primary" onClick={this.performSearch}>Search</Button>
           <FormControl.Feedback />
           <p></p>
-          <HelpBlock bsClass="searchExp">Enter any date from 1995 to today in format: YYYY-MM-DD</HelpBlock>
+          <HelpBlock bsClass="searchExp">Enter any date from 1996 to today in format: YYYY-MM-DD</HelpBlock>
         </FormGroup>
       </form>
 
-       <div className="result">
-        {/* {this.state.value.map(image => <Image className="searchResult" src={image.url} responsive /> )} */}
+{/* // How the search from the date search is displayed. 
+With title, date and then an on hover explanation of the image */}
+       <div className="result"> 
         <h3 className="title">{this.state.podImage.title}</h3>
                 <h3>{new Date(this.state.podImage.date).toDateString()}</h3>
-       <Image className="searchResult" src={this.state.podImage.url} responsive />   
+       <Image alt={this.state.podImage.explanation} title={this.state.podImage.explanation} className="searchResult" src={this.state.podImage.url} responsive />   
           </div>
       </div>
       

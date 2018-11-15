@@ -60,3 +60,17 @@ margin: auto;
 background-color: aqua;
 max-width: 80%;
 }
+
+/* mult Image Search result */
+.multiImage {
+  margin: auto;
+  padding: 1.5rem;
+  max-height: 15rem;
+}
+
+.results {
+  background-color: lightslategray;
+  padding: 1.5rem;
+  margin: auto;
+
+}
