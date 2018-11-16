@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import {Jumbotron, Image,} from "react-bootstrap";
+import {Button, PageHeader } from "react-bootstrap";
 
 import BackgroundHome from './BackgroundHome'
 
@@ -12,8 +12,19 @@ class Home extends Component {
     return (
      <div className="background">
       <div className="titlediv">
-          <p>About Nasa Image</p> 
-{/* <         insert button links */}
+        <PageHeader>
+          
+          <small>Subtext for header</small>
+        </PageHeader>;
+          <div>
+            {/* Provides extra visual weight and identifies the primary action in a set of buttons */}
+  <Button bsStyle="primary">Primary</Button>
+  {/* Provides extra visual weight and identifies the primary action in a set of buttons */}
+  <Button bsStyle="primary">Primary</Button>
+  {/* Provides extra visual weight and identifies the primary action in a set of buttons */}
+  <Button bsStyle="primary">Primary</Button>
+          </div>
+
       </div>
 <BackgroundHome />
      </div>

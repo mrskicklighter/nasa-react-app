@@ -8,7 +8,7 @@ const Header = ( ) => (
   <Navbar.Collapse>
     <Nav>
    
-      <NavLink to="/home">Home</NavLink>
+      <NavLink exact to="/">Home</NavLink>
 
     
       <NavLink to="/today">Today's Image</NavLink>

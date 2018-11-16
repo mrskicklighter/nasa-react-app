@@ -3,7 +3,6 @@ import React from 'react';
 import { FormGroup, ControlLabel,FormControl, HelpBlock, Button, Grid, Row, Col, Thumbnail} from "react-bootstrap";
 
 
-
 class Multiple extends React.Component {
   constructor(props, context) {
     super(props, context);
