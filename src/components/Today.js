@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {Jumbotron, Image,} from "react-bootstrap";
 
 
+// This component will always pull the most recent image of the day from API, cannot be changed by user, only changes
+// as the API is updated 
 
 class Today extends Component {
 
@@ -23,13 +25,14 @@ class Today extends Component {
       });
   }
 
-  
+  // Title, Date, Image & Explanation of image from API is displayed 
+
   render() {
 
     return (
       <div>
               <Jumbotron bsClass="jumbotron">
-                <h1 className="header">Nasa Image of the Day </h1>
+                <h1 className="header">Nasa's Most Recent Image </h1>
                 <h2 className="title">{this.state.pods.title}</h2>
                 <h3>{new Date(this.state.pods.date).toString()}</h3>
                 

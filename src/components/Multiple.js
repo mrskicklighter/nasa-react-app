@@ -2,6 +2,7 @@
 import React from 'react';
 import { FormGroup, ControlLabel,FormControl, HelpBlock, Button, Grid, Row, Col, Image} from "react-bootstrap";
 
+// This component allows viewer to get all images between two dates and displays them on page with explanation hover
 
 class Multiple extends React.Component {
   constructor(props, context) {
@@ -15,6 +16,7 @@ class Multiple extends React.Component {
       multiImage: []
     };
   }
+// Function that fetches multiple images from API, need add a method that creates a max amount of images to retrieve
 
   performSearch = () => {
     fetch(`https://api.nasa.gov/planetary/apod?api_key=ge4N4qMzvNdIl38waxmldDBaeKjX2pbmbhkDxSQo&start_date=${this.state.start}&end_date=${this.state.end}`)
@@ -23,10 +25,12 @@ class Multiple extends React.Component {
         this.setState({ multiImage: responseData});
       })
       .catch(error => {
-        console.log('Error fetching and parsing data', error);
+        alert('Oops something wrong dates, refresh & try again', error);
       });
   }
 
+  // Handle change method that work with teh binding methods that allow the user to type in start & end date and the methods 
+  // put the dates into the API fetch method, 
   handleChangeStart(e) {
     this.setState({ start: e.target.value });
   }
@@ -37,10 +41,15 @@ class Multiple extends React.Component {
   render() {
     return (
      <div className="searchForm">
-      <form>
+      <form className="form">
         <FormGroup>
-          <ControlLabel bsClass="multiSearchTitle">Search for a grouping of images by dates </ControlLabel>
+          <ControlLabel bsClass="multiSearchTitle">
+          <h1>See Multiple Images by Date</h1> 
+          </ControlLabel>
           <p></p>
+          <h2>See all the images between two dates </h2>
+          <h3>For best results do not search more than 25 days out</h3>
+
           <FormControl bsClass="searchField"
             type="text"
             value={this.state.start}
@@ -53,7 +62,7 @@ class Multiple extends React.Component {
             placeholder="YYYY-MM-DD"
             onChange={this.handleChangeEnd}
           />
-           {/* Provides extra visual weight and identifies the primary action in a set of buttons */}
+          
             <Button bsStyle="primary" onClick={this.performSearch}>Search</Button>
           <FormControl.Feedback />
           <p></p>
@@ -64,10 +73,10 @@ class Multiple extends React.Component {
 {/* // How the search from the date search is displayed. 
 With title, date and then an on hover explanation of the image */}
        <div className="results"> 
-                    <Grid>
+                    <Grid fluid>
                     <Row>
-                        <Col xs={6} md={3}>
-                {this.state.multiImage.map(image => <Image bsClass="multiImageResult" src={image.url} alt={image.title} title={image.explanation} responsive thumbnail />)}
+                        <Col xs={6} md={8} lg={10}>
+                {this.state.multiImage.map(image => <Image src={image.url} alt={image.title} title={image.explanation} responsive thumbnail />)}
                         </Col>
                         </Row>
                         </Grid>

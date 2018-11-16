@@ -4,6 +4,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: lightgoldenrodyellow; 
 }
 
 code {
@@ -20,6 +21,10 @@ code {
   text-align: center;
 }
 
+.header {
+  size: 7rem;
+}
+
 .explan {
   size: 1em;
   color: black;
@@ -28,10 +33,14 @@ code {
 /* search date page css */
 .searchForm {
   border: 1rem grey solid;
-  margin: auto;
-  padding: 1rem;
-  width: 86%;
+  padding: 2rem;
+  /* width: 86%; */
 }
+.form {
+  color: brown;
+}
+
+/* searchDate page styling  */
 .searchTitle {
   font-size: 6rem;
   color: darkcyan;
@@ -56,27 +65,43 @@ background-color: aqua;
 max-width: 80%;
 }
 
-/* mulitple search for group of dates css  */
-.multiImage {
-  margin: auto;
-  padding: 1.5rem;
-  max-height: 15rem;
-}
+/* mulitple search for group of dates page css  */
 
 .results {
   background-color: lightslategray;
-  padding: 1.5rem;
   margin: auto;
+}
 
+.results Image {
+  margin: auto;
 }
 
 /* Header Nav Bar Styling  */
 
 .nav {
-  display: inline-flex;
-  background-color: lightslategray;
-  padding: 3rem;
-  margin: auto;
-  font-size: 1.5rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  font-size: 2rem;
   text-decoration: none;
+  display: inline;
+}
+
+/* home page styling */
+
+.homeImage {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.img {
+  padding: 10rem;
+}
+.homeButton {
+  justify-items: center;
+}
+.homeButton button {
+  margin: 1rem;
+  font-size: 4rem;
+
+
 }

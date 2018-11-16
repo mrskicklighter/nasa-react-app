@@ -2,6 +2,7 @@ import React from 'react';
 import {Image, FormGroup, ControlLabel,FormControl, HelpBlock, Button} from "react-bootstrap";
 
 
+// Component that retrieves one specific image from API, date chosen by user
 
 class SearchDate extends React.Component {
   constructor(props, context) {
@@ -22,7 +23,7 @@ class SearchDate extends React.Component {
         this.setState({ podImage: responseData});
       })
       .catch(error => {
-        console.log('Error fetching and parsing data', error);
+        alert('Oops something wrong dates, refresh & try again', error);
       });
   }
 
@@ -30,6 +31,7 @@ class SearchDate extends React.Component {
     this.setState({ value: e.target.value });
   }
 
+  // Title, and search from connected to the API Fetch Image of the Day
   render() {
     return (
      <div className="searchForm">
@@ -43,11 +45,11 @@ class SearchDate extends React.Component {
             placeholder="YYYY-MM-DD"
             onChange={this.handleChange}
           />
-           {/* Provides extra visual weight and identifies the primary action in a set of buttons */}
-            <Button bsStyle="primary" onClick={this.performSearch}>Search</Button>
+          
+            <Button bsStyle="primary" onClick={this.performSearch}> FIND </Button>
           <FormControl.Feedback />
           <p></p>
-          <HelpBlock bsClass="searchExp">Enter any date from 1996 to today in format: YYYY-MM-DD</HelpBlock>
+          <HelpBlock bsClass="searchExp">Enter any date from June 16, 1995 to today in format: YYYY-MM-DD</HelpBlock>
         </FormGroup>
       </form>
 
