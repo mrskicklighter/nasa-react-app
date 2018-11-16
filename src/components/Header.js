@@ -6,7 +6,7 @@ import {NavLink} from 'react-router-dom';
 const Header = ( ) => (
 <Navbar inverse collapseOnSelect>
   <Navbar.Collapse>
-    <Nav>
+    <Nav className="nav">
    
       <NavLink exact to="/">Home</NavLink>
 

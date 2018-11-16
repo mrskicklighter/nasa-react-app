@@ -11,12 +11,7 @@ code {
     monospace;
 }
 
-.pod {
-  max-width: 50%;
-  max-height: 40rem;
-  margin: auto;
-  border: 1rem whitesmoke solid;
-}
+/* Today page styling  */
 
 .jumbotron {
   margin: auto;
@@ -30,7 +25,7 @@ code {
   color: black;
 }
 
-/* search css */
+/* search date page css */
 .searchForm {
   border: 1rem grey solid;
   margin: auto;
@@ -61,7 +56,7 @@ background-color: aqua;
 max-width: 80%;
 }
 
-/* mult Image Search result */
+/* mulitple search for group of dates css  */
 .multiImage {
   margin: auto;
   padding: 1.5rem;
@@ -73,4 +68,15 @@ max-width: 80%;
   padding: 1.5rem;
   margin: auto;
 
+}
+
+/* Header Nav Bar Styling  */
+
+.nav {
+  display: inline-flex;
+  background-color: lightslategray;
+  padding: 3rem;
+  margin: auto;
+  font-size: 1.5rem;
+  text-decoration: none;
 }

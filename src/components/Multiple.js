@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { FormGroup, ControlLabel,FormControl, HelpBlock, Button, Grid, Row, Col, Thumbnail} from "react-bootstrap";
+import { FormGroup, ControlLabel,FormControl, HelpBlock, Button, Grid, Row, Col, Image} from "react-bootstrap";
 
 
 class Multiple extends React.Component {
@@ -67,7 +67,7 @@ With title, date and then an on hover explanation of the image */}
                     <Grid>
                     <Row>
                         <Col xs={6} md={3}>
-                {this.state.multiImage.map(image => <Thumbnail bsClass="multiImageResult" src={image.url} alt={image.title} title={image.explanation} responsive />)}
+                {this.state.multiImage.map(image => <Image bsClass="multiImageResult" src={image.url} alt={image.title} title={image.explanation} responsive thumbnail />)}
                         </Col>
                         </Row>
                         </Grid>
